@@ -3,9 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TodoController;
 
-
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('todos.index');
 });
 
 Route::get('/todos/{id}/delete', [TodoController::class, 'delete']);
